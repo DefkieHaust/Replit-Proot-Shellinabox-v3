@@ -1,0 +1,8 @@
+/etc/default/shellinabox
+/etc/init.d/shellinabox
+/etc/shellinabox/options-available/00+Black on White.css
+/etc/shellinabox/options-available/00_White On Black.css
+/etc/shellinabox/options-available/01+Color Terminal.css
+/etc/shellinabox/options-available/01_Monochrome.css
+/etc/shellinabox/options-available/README
+/etc/shellinabox/options-enabled/README

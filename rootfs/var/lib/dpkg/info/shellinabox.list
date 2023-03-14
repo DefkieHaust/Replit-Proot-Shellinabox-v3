@@ -1,0 +1,35 @@
+/.
+/etc
+/etc/default
+/etc/default/shellinabox
+/etc/init.d
+/etc/init.d/shellinabox
+/etc/shellinabox
+/etc/shellinabox/options-available
+/etc/shellinabox/options-available/00+Black on White.css
+/etc/shellinabox/options-available/00_White On Black.css
+/etc/shellinabox/options-available/01+Color Terminal.css
+/etc/shellinabox/options-available/01_Monochrome.css
+/etc/shellinabox/options-available/README
+/etc/shellinabox/options-enabled
+/etc/shellinabox/options-enabled/README
+/usr
+/usr/bin
+/usr/bin/shellinaboxd
+/usr/share
+/usr/share/doc
+/usr/share/doc/shellinabox
+/usr/share/doc/shellinabox/AUTHORS
+/usr/share/doc/shellinabox/NEWS.gz
+/usr/share/doc/shellinabox/README
+/usr/share/doc/shellinabox/TODO
+/usr/share/doc/shellinabox/changelog.gz
+/usr/share/doc/shellinabox/copyright
+/usr/share/doc/shellinabox/examples
+/usr/share/doc/shellinabox/examples/cgi-mode-example.sh
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/shellinabox
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/shellinaboxd.1.gz

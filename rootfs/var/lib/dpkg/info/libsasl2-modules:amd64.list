@@ -1,0 +1,4 @@
+/etc
+/etc/logcheck
+/etc/logcheck/ignore.d.server
+/etc/logcheck/ignore.d.server/libsasl2-modules

@@ -1,0 +1,68 @@
+PROOT SHELLINABOX V3 MANUAL
+
+1 • configure `replit.nix` file and Install Proot environment with `wget link` inside `rootfs` then decompress it with `tar -xvf ./*` and add the `root.sh` in repl and add the execution permission to it with `chmod +x root.sh` to get root access
+2 • delete the tar file and enter the Proot environment with `./root.sh` then set root password with `passwd` and update the system using `apt update && apt upgrade -y`
+3 • Install shellinabox in proot
+4 • Set nobody user passed with `passwd nobody`
+5 • Set shell for nobody in /etc/passed to `/bin/bash`
+6 • Set nobody home at `/` in the /etc/passwd file
+7 • Give nobody sudo ability by adding `nobody ALL(ALL:ALL) NOPASSWD: ALL` in sudoers
+8 • Create user with `adduser delta`
+9 • Add the delta user in sudoers with `delta ALL(ALL:ALL) ALL`
+10 • add the `add_path.sh` in /etc/profile.d/ and give it execution permission with `chmod +x add_path.sh`
+11 • add the `nobody_no.sh` in /etc/profile.d/ and give it execution permission with `chmod +x add_path.sh`
+12 • add `runtime.sh` in the repl and configure `.replit` to run it
+13 • add `runner_script.sh` in /boot/ and give it execution permission with `chmod +x add_path.sh`
+
+++ raw rootfs ++
+https://mega.nz/file/DAwWhAAa#wvMDy6IvM3UbTS_2YHdIR06EgA_ox-FL6s58xA2gZ10
+
+**replit.nix**
+
+{ pkgs }: {
+    deps = [
+        pkgs.neofetch
+        pkgs.proot
+        pkgs.wget
+        pkgs.bashInteractive
+    ];
+}
+
+**root.sh**
+
+echo "PATH=$PATH" > NixPath.sh
+chmod +x NixPath.sh
+proot \
+-b ./:/dev/shm \
+-b /nix \
+-S rootfs \
+/bin/bash
+
+**runtime.sh**
+
+echo "PATH=$PATH" > NixPath.sh
+chmod +x NixPath.sh
+proot \
+-b ./:/dev/shm \
+-b /nix \
+-S ./rootfs \
+/bin/bash \
+-c "source /boot/runner_script.sh && shellinaboxd -t -d"
+
+**add_path.sh**
+
+source /dev/shm/NixPath.sh
+
+**nobody_no.sh**
+
+if (( $EUID == 65534 )); then
+    sudo su -l delta
+    exit
+fi
+
+**.replit**
+
+run = "./runtime.sh"
+
+[nix]
+channel = "stable-22_11"

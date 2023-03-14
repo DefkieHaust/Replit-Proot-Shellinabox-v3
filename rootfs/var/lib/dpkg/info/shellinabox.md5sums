@@ -1,0 +1,10 @@
+4132e2473a8bb6c65f8c22738022f971  usr/bin/shellinaboxd
+4e27a0e83f6f5abaa700af75e1d8a084  usr/share/doc/shellinabox/AUTHORS
+6898fb78946adb8bfcb0c37b6ad27b77  usr/share/doc/shellinabox/NEWS.gz
+be6d5da49ddf63c3efc2f8f7ad031384  usr/share/doc/shellinabox/README
+02bec78fe6ca158e47574fa545745758  usr/share/doc/shellinabox/TODO
+55ba0e2e4b95d82dbb95e3c714fc35fc  usr/share/doc/shellinabox/changelog.gz
+3181501dff028ebb9d8b9e4fe8b86745  usr/share/doc/shellinabox/copyright
+a5841644026d6c34c333cdf666b9f468  usr/share/doc/shellinabox/examples/cgi-mode-example.sh
+c6a66480b22d4db4aab7e05077f36544  usr/share/lintian/overrides/shellinabox
+53799f8291b384d8268edeb97c83bedb  usr/share/man/man1/shellinaboxd.1.gz
